@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">sumateClientapp</string>
+    <string name="title_activity_main">sumateClientapp</string>
+    <string name="package_name">com.alexader.sumateClientapp</string>
+    <string name="custom_url_scheme">com.alexader.sumateClientapp</string>
+    <string name="activity_name">com.alexader.sumateClientapp</string>
+</resources>

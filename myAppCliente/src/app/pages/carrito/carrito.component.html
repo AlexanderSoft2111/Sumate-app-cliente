@@ -1,0 +1,31 @@
+<ion-header>
+    <app-header [titulo]="tituloCarrito"></app-header>
+</ion-header>
+<ion-content>
+    <ion-item lines="none">
+        <ion-label class="label">{{articulos}}</ion-label>
+        <ion-label>artículos en tu carrito</ion-label>
+    </ion-item>
+    <div *ngFor="let producto of pedido.productos">
+        <app-item-carrito [productoPedido]="producto"></app-item-carrito>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col class="subtitulo text-center col-detalle" size="6" style="border-right: 1px solid #333;">
+                Cantidad: {{Cantidad}} un
+            </ion-col>
+            <ion-col class="subtitulo text-center col-detalle total" size="6">
+                Total: ${{Total.toFixed(2)}}
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button (click)="pedir()" expand="full" color="sudamate">
+                    Pedir
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

@@ -1,0 +1,17 @@
+<ion-content class="container">
+    <ion-card class="card">
+        <img src="/assets/img/fondo login.jpg" alt="logo">
+        <ion-card-content>
+            <form #fLogin="ngForm" (ngSubmit)="login()" class="box-card">
+                <ion-item class="box-item">
+                    <ion-icon class="icon" name="lock-closed"></ion-icon>
+                    <ion-input placeholder="Ingresa tu código" type="text" class="input" [(ngModel)]="user.password" minlength="5" name="password"></ion-input>
+                </ion-item>
+                <ion-button class="button-login" type="submit" [disabled]="!fLogin.valid">Login</ion-button>
+                <ion-item class="box-link">
+                    <a class="link contraseña">Recordar Constraseña?</a>
+                </ion-item>
+            </form>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
